@@ -4,16 +4,16 @@
         <meta charset="UTF-8">
         <title>Calculator</title>
         <link rel="stylesheet" href="styles.css">
-        <script src="javascript.js"></script>
+        <script src="javascript.js" defer></script>
     </head>
     <body>
         <div class="calculator">
-            <div class="display"></div>
+            <input type="text" id="display" value="0" readonly>
             <div class="operators">
-                <button class="btn" id="add">+</button>
-                <button class="btn" id="subtract">-</button>
-                <button class="btn" id="divide">÷</button>
-                <button class="btn" id="multiply">x</button>
+                <button class="opBtn" id="add">+</button>
+                <button class="opBtn" id="subtract">-</button>
+                <button class="opBtn" id="divide">÷</button>
+                <button class="opBtn" id="multiply">x</button>
             </div>
             <div class="beneathOps">
                 <div class="numbers">
@@ -31,6 +31,11 @@
                         <button class="btn" id="one">1</button>
                         <button class="btn" id="two">2</button>
                         <button class="btn" id="three">3</button>
+                    </div>
+                    <div class="extraBottomRow">
+                        <button class="btn" id="clear">C</button>
+                        <button class="btn" id="zero">0</button>
+                        <button class="btn" id="dec">.</button>
                     </div>
                 </div>
                 <button id="equals">=</button>
