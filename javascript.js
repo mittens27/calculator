@@ -1,10 +1,3 @@
-var operators = {
-    add: (a, b) => a + b,
-    subtract: (a, b) => a - b,
-    multiply: (a, b) => a * b,
-    divide: (a, b) => a / b
-};
-
 const display = document.getElementById("display");
 const btns = document.querySelectorAll(".btn");
 
@@ -22,7 +15,27 @@ btns.forEach(btn => {
     });
 });
 
+var operators = {
+    add: (a, b) => a + b,
+    subtract: (a, b) => a - b,
+    multiply: (a, b) => a * b,
+    divide: (a, b) => a / b
+};
+
+const addBtn = document.getElementById("add");
+const subBtn = document.getElementById("subtract");
+const divBtn = document.getElementById("divide");
+const mulBtn = document.getElementById("multiply");
+
 const opBtns = document.querySelectorAll(".opBtn");
+
+opBtns.forEach(opBtn => {
+    opBtn.addEventListener("click", () => {
+        var a = display.value;
+        display.value = "0";
+    });
+});
+
 
 
 const clear = document.getElementById("clear");
