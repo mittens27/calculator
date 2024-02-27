@@ -1,6 +1,7 @@
 const display = document.getElementById("display");
 const btns = document.querySelectorAll(".btn");
 const opBtns = document.querySelectorAll(".opBtn");
+const decBtn = document.getElementById("dec");
 
 let currentInput = '0';
 let prevInput = null;
@@ -14,6 +15,10 @@ const operations = {
     multiply: (a, b) => a * b,
     divide: (a, b) => a / b
 };
+
+decBtn.addEventListener("click", () => {
+    decBtn.disabled = true;
+});
 
 btns.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -46,6 +51,7 @@ function handleOperator(o) {
     currentInput = '0';
     operator = o;
     waitForSecondOperand = true;
+    decBtn.disabled = false;
 }
 
 document.querySelector('#equals').addEventListener("click", () => {
@@ -81,6 +87,7 @@ function clear() {
     operator = null;
     result = null;
     waitForSecondOperand = false;
+    decBtn.disabled = false;
 }
 
 document.querySelector('#clear').addEventListener("click", () => {

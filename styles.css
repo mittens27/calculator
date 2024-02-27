@@ -1,6 +1,7 @@
 body {
     display: flex;
     justify-content: center;
+    background-color: rgb(205, 205, 205);
 }
 
 .operators, .numbers, .beneathOps, .topRow, .midRow, .bottomRow, .extraBottomRow, #equals {
@@ -33,6 +34,14 @@ body {
     width: 36px;
     background-color: rgb(35, 35, 35);
     color: aliceblue;
+}
+
+.opBtn {
+    background-color: rgb(56, 56, 56)
+}
+
+#clear {
+    background-color: brown;
 }
 
 #equals {
